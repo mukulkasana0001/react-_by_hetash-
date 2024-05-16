@@ -9,7 +9,7 @@ function Github() {
 
  const data = useLoaderData()  
     // const [data, setdata] = useState([])
-    // useEffect(() => {
+    // useEffect(() => {s
     //     fetch('https://api.github.com/users/mukulkasana0001')
     //         .then((Response) => {
     //             return Response.json();

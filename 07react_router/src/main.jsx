@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
 import Layout from './Layout.jsx'
 import './index.css'
-import User from './components/User/User.jsx'
+import User from './components/User/User.jsx'   //there is not any error
 import Home from './components/Home/Home'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact.jsx'
