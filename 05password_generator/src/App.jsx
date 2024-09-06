@@ -11,6 +11,39 @@ function App() {
 
   // useRef hook
   const passwordreference =useRef(null)
+
+/* 
+ EXAMPLE OF  useRef() WITH THE HELP OR CHEAT GPT -
+
+ ** Managing Focus or Selecting Text** -- :
+You might use ref to manage focus or select text within an input field.
+
+Example: Select Text on Focus
+
+import React, { useRef } from 'react';
+
+function SelectText() {
+    const inputRef = useRef(null);
+
+    const handleFocus = () => {
+        inputRef.current.select();  // Select all text inside the input
+    };
+
+    return (
+        <div>
+            <input ref={inputRef} type="text" defaultValue="Select me on focus!" onFocus={handleFocus} />
+        </div>
+    );
+}
+
+export default SelectText;
+In this example, all the text inside the input field is automatically selected when it gains focus.
+
+*/
+
+
+
+
   // below we use useCallback hook
   const passwordgenerator = useCallback(() => {
     let pass = "";
@@ -32,11 +65,12 @@ function App() {
   }, [length, numallowed, charallowed, setpassword])
 
   const copypasswordtoclipbord = useCallback(()=>{
-    passwordreference.current?.select(password)   //this is only for creating effect
+    passwordreference.current?.select(password)   //this is only for creating effect   ( " Optional Chaining (?.): Optional chaining is used to safely access deeply nested properties. If the property does not exist, it returns undefined instead of throwing an error.")
     passwordreference.current?.setSelectionRange(0,100)      //this is for creating a effect on selected text
-
     window.navigator.clipboard.writeText(password)   //we copy text by this <---
-  },[password])
+        },[password])
+
+
 
   // there is no need to store useEffect in a variable
   useEffect(()=>{
