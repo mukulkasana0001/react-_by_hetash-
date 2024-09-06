@@ -6,7 +6,7 @@ import Chai from './Chai.jsx'
 //**** how to use variable
 
 function App() {
-  const username = "chai aur code"
+  const username = "chai aur code"       // for use variables we have t write evaluated expression
 
   return (
     <>

@@ -14,8 +14,25 @@ function App() {
     // counter = counter +1;
     setcounter( counter +1)
 
+        
+    //***  for interview question 
+    // question is --  what if we do this (like below ) is counter increment all time or at once 
+   /* 
+    setcounter( counter +1)
+    setcounter( counter +1)
+    setcounter( counter +1)
+    setcounter( counter +1)
     
-    // setcounter( (prevcounter) => prevcounter +1)
+    */ 
+
+    // ** answer is --> actualy it is not a working of setcounter( ) it is working of useState() hook as we study in theory thai
+                        // the usestate() send all the updates (to ui or variables)  in the batches (with the help of fiber algorithm)
+                        //so here all the setcounter added into a same batch because they work same  (so it update at once only)
+
+     
+    // if we want update all as one by one
+
+    // setcounter( (prevcounter) => prevcounter +1)   //actualy setcounter() function except a callback function (prevcounter means previous updated value you may chance its name prevcounter to another or anything else )
     // it take privious counter
     // below syntex is same as above prevcounter
     //   setcounter( prevcounter => prevcounter +1)
