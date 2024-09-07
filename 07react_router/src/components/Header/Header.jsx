@@ -1,6 +1,12 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
-
+import { Link, NavLink } from 'react-router-dom'; // The 'Link component' is used to create hyperlinks that navigate to different routes within your application.
+                                                  // It’s similar to a traditional HTML <a> tag but is designed to work with React Router.
+                                                  //The 'NavLink component' is a special version of Link that can apply active styles to the link when it is the current route.
+                                                  // This is useful for highlighting the currently active page in your navigation menu.
+                                                //****Why Not Use href for Internal Links in React?
+                                                //   Using href causes a full-page reload, which defeats the purpose of a single-page application (SPA).
+                                                //   The Link component from react-router-dom handles navigation in an SPA without reloading the page, providing a smoother and faster user experience.
+                                                //   In summary, use href for external links and standard HTML, and use to with Link or NavLink for internal navigation in a React app.
 
 export default function Header() {
     return (

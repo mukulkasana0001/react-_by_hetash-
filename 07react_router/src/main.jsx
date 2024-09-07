@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
+
 import Layout from './Layout.jsx'
 import './index.css'
 import User from './components/User/User.jsx'   //there is not any error
@@ -36,8 +37,9 @@ const router = createBrowserRouter(
          loader : gitInfoLoader   //here syntex is different from below router
       },
       {
-        path: "user/:userid",  //what is passes after colon is passes to the element(component) "user" by importing useparams
-
+        path: "user/:userid",  //what is passes after colon ':' is passes to the element(component (element:<User/>)) "user" by importing useparams.
+                              // now you have the access of userid in the element (component)  which is render here
+                              // but you have to import useParams from router
         element:<User/>
       }
     ]
