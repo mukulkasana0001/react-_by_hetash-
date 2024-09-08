@@ -12,7 +12,7 @@ import Github, { gitInfoLoader } from './components/Github/Github.jsx'
 // here we import routerProvider  from 'react-router-dom'
 import { RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 
-const router = createBrowserRouter(
+const router = createBrowserRouter(   //createBrowserRouter([ ]) is use for creating router
   [
     {
       path: '/',
