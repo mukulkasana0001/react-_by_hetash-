@@ -10,7 +10,7 @@ const Login = ()=>{
     const {setuser} = useContext(Usercontext)
     const handelsubmit =(e)=> {
               e.preventDefault()
-              setuser({username,password})
+              setuser({username,password})     // here we send the data
 
     }
     return(
