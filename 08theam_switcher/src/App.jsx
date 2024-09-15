@@ -2,8 +2,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { TheamProvider } from './context/theam'
-import Button from './component/button'
-import Card from './component/card'
+import Button from './component/Button'
+import Card from './component/Card'
 
 function App() {
 

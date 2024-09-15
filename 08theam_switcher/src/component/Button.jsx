@@ -30,3 +30,22 @@ return (
     </label>
 );
 }
+
+
+
+
+
+// ***EXPLAIN OF 'checked' BY USING CHEATGPT ****
+
+// It checks if the checkbox is checked (e.currentTarget.checked returns true if it's checked).
+// If it is checked, it calls Darktheam() to apply the dark theme; otherwise, it calls Lighttheam() to apply the light theme.
+// The checked Attribute:
+
+// javascript
+// Copy code
+// checked={theamMode === 'dark'}
+
+
+// This controls whether the checkbox is checked (selected) or not.
+// If theamMode is equal to 'dark', the checkbox will be checked (i.e., checked={true}).
+// If theamMode is equal to anything else (like 'light'), the checkbox will not be checked (i.e., checked={false}).
