@@ -58,10 +58,10 @@ const anotherUser = "chai aur react"
 
 // *** react use this type of object (it transfer the function return into this type of object  using  this method --> React.createElement )
 const reactElement = React.createElement(
-    'a',
-    {href: 'https://google.com',target: '_blank' },
-    'click me to visit google',
-    anotherElement
+    'a',                                                   //type
+    {href: 'https://google.com',target: '_blank' },        //key
+    'click me to visit google',                            //ref
+    anotherElement       //here we use variables at last    (props)
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
