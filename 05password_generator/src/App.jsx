@@ -65,7 +65,7 @@ In this example, all the text inside the input field is automatically selected w
   }, [length, numallowed, charallowed, setpassword])
 
   const copypasswordtoclipbord = useCallback(()=>{
-    passwordreference.current?.select(password)   //this is only for creating effect   ( " Optional Chaining (?.): Optional chaining is used to safely access deeply nested properties. If the property does not exist, it returns undefined instead of throwing an error.")
+    passwordreference.current?.select()   //this is only for creating effect   ( " Optional Chaining (?.): Optional chaining is used to safely access deeply nested properties. If the property does not exist, it returns undefined instead of throwing an error.")
     passwordreference.current?.setSelectionRange(0,100)      //this is for creating a effect on selected text
     window.navigator.clipboard.writeText(password)   //we copy text by this <---
         },[password])
