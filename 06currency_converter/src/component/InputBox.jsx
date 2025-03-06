@@ -43,7 +43,8 @@ function InputBox({
                 >
 
                     {currencyOption.map((Currency) =>
-                    (<option key={Currency} value="Currency">      // remember the key in loop in react it increase the performance
+                    (<option key={Currency} value="Currency">      
+                    {/* remember the key in loop in react it increase the performance */}
                         {Currency}
                     </option>
                     ))}
