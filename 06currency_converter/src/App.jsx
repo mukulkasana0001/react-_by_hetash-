@@ -4,6 +4,7 @@ import { InputBox } from './component';
 import useCurrencyInfo from './hooks/usecurrencyinfo';
 
 function App() {
+  const [country,setcountry]=useState({})
 
   const [amount, setamount] = useState(0)
   const [from, setfrom] = useState('usd')
@@ -25,7 +26,21 @@ function App() {
   const convert = () => {
     setconvertedAmount(amount * currencyinfo[to])
 
+
+     // FOR SHOW CONTERY
+     fetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json')
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Fetched data:", data['usd']); // ✅ Now logs fetched data correctly
+
+      setcountry(data);  // ✅ Corrected state update
+
+    });
+     
   }
+
+
+  
 
   return (
     <>
@@ -43,7 +58,7 @@ function App() {
                 convert()
               }}
             >
-              <div className="w-full mb-1">
+              <div className="w-full mb-1"> {country[from]}
                 <InputBox
                   label="From"
                   amount={amount}
@@ -66,7 +81,7 @@ function App() {
                   swap
                 </button>
               </div>
-              <div className="w-full mt-1 mb-4">
+              <div className="w-full mt-1 mb-4"> {country[to]}
                 <InputBox
                   label="To"
                  amount={convertedAmount}
@@ -80,7 +95,7 @@ function App() {
                 />
               </div>
               <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
-              Convert {from.toUpperCase()} to {to.toUpperCase()}
+              Convert {from.toUpperCase()} to {to.toUpperCase()} 
               </button>
             </form>
           </div>
