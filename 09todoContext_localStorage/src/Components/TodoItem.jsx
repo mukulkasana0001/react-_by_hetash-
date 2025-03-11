@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useTodo } from '../Contexts/TodoContext';
 
-function TodoItem({ todo }) {
+function TodoItem({ todo }) {                          //here this todo is a object like { id: 1, todo:"todo msg", completed: false,}      ---thats why we write todo.todo
   const [isTodoEditable, setIsTodoEditable] = useState(false)
   const [todoMsg, setTodoMsg] = useState(todo.todo)
   const {updateTodo, deleteTodo, toggleComplete} = useTodo()
 
   const editTodo = () => {
-    updateTodo(todo.id, {...todo, todo: todoMsg})
+    updateTodo(todo.id, {...todo, todo: todoMsg})            // here also we send a todo like { id: 1, todo:"todo msg", completed: false,} and then overwrite the  todo.todo
     setIsTodoEditable(false)
   }
   const toggleCompleted = () => {
