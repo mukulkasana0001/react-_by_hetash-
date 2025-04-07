@@ -26,7 +26,7 @@ function Signup() {
     //     }
     // }
     const create = async (data) => {    // In data it automatacly get the input filds (name password ,email) with the help of 'const {register, handleSubmit} = useForm()'
-        setError("");                   
+        setError("");
         try {
             // create account + login
             await authService.createAccount(data);
